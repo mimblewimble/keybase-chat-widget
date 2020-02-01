@@ -1,0 +1,15 @@
+{
+  "method": "read",
+  "params": {
+    "options": {
+      "channel": {
+        "name": "grincoin",
+        "members_type": "team",
+        "topic_name": "general"
+      },
+      "pagination": {
+        "num": 100
+      }
+    }
+  }
+}

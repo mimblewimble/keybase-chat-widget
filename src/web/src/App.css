@@ -1,0 +1,159 @@
+/* @font-face {
+  font-family: 'Inter';
+  src: url('http://localhost:3000/Inter.var.woff2');
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Ubuntu', sans-serif;
+  font-size: 13px;
+}
+.App-header {
+  display: flex;
+  padding: 6px 12px;
+  background-color: #252627;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  font-size: 13px;
+  align-items: center;
+}
+.App-header svg {
+  margin-right: 16px;
+}
+.App-channelName {
+  flex: 1;
+}
+.App-memberCount {
+  margin-right: 16px;
+  font-size: 12px;
+  color: #696969;
+}
+
+.Chat {
+  background-color: #2E2F30;
+  border-radius: 0 0 8px 8px;
+  padding: 8px 16px 14px 16px;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.Message {
+  display: flex;
+  margin-bottom: 6px
+}
+.Message-user {
+  display: flex;
+  flex-shrink: 0;
+  flex-basis: 160px;
+}
+.Message-timestamp {
+  color: #696969;
+  margin-right: 8px;
+  flex-shrink: 0;
+  font-size: 11px;
+  margin-top: 2px;
+  line-height: 1.47059em;
+}
+.Message-username {
+  flex-grow: 1;
+  margin-right: 8px;
+  text-align: end;
+  word-break: break-all;
+  line-height: 1.47059em;
+  flex-shrink: 0;
+}
+.Message-body {
+  flex-shrink: 1;
+  color: #BBBBBB;
+  line-height: 1.47059em;
+  word-break: break-word;
+  white-space: pre-line;
+}
+.Message-reaction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #252627;
+  display: inline-block;
+  border-radius: 40px;
+  padding: 2px 6px;
+  margin-top: 4px;
+  font-size: 15px;
+  transition: all .2s ease;
+}
+.Message-reaction:hover {
+  background-color: rgba(255, 255, 255, 0.15)
+}
+.Message-reactionCount {
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+span.emoji {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: baseline;
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+	width: 1em;
+	height: 1em;
+	background-size: 1em;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	background-position: 50%, 50%;
+	background-size: contain;
+}
+
+span.emoji-sizer {
+	line-height: 0.81em;
+	font-size: 1em;
+ 	margin: -2px 0;
+}
+
+span.emoji-outer {
+	display: -moz-inline-box;
+	display: inline-block;
+	*display: inline;
+	height: 1em;
+	width: 1em;
+}
+
+span.emoji-inner {
+	display: -moz-inline-box;
+	display: inline-block;
+	text-indent: -9999px;
+	width: 100%;
+	height: 100%;
+	vertical-align: baseline;
+	*vertical-align: auto;
+	*zoom: 1;
+}
+
+img.emoji {
+	width: 1em;
+	height: 1em;
+}
+
+@media (max-width: 500px) {
+  .Message {
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  .Message-user {
+    flex-basis: auto;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .Message-username {
+    text-align: left;
+    flex-grow: 0;
+  }
+  .Chat {
+    height: 350px;
+  }
+}
