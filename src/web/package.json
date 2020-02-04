@@ -89,6 +89,10 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-cli": "^3.3.10"
   },
+  "resolutions": {
+    "terser-webpack-plugin/serialize-javascript": "2.1.2",
+    "uglifyjs-webpack-plugin/serialize-javascript": "2.1.2"
+  },
   "jest": {
     "roots": [
       "<rootDir>/src"
