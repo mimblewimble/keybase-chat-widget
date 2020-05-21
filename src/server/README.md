@@ -36,9 +36,18 @@ $ sudo add-apt-repository universe
 $ sudo add-apt-repository ppa:certbot/certbot
 $ sudo apt-get update
 $ sudo apt-get install certbot
+$ sudo certbot certonly --standalone
 ```
 
-Start server
+Start server with `pm2`
 ```
-$ HTTP_PORT=80 HTTPS_PORT=443 PRIVKEY_PATH="/etc/..." FULLCHAIN_PATH="/etc/..." authbind --deep node server.js
+$ HTTPS_PORT=443 \
+PRIVKEY_PATH=/etc/letsencrypt/live/grin.nijynot.com/privkey.pem \
+FULLCHAIN_PATH=/etc/letsencrypt/live/grin.nijynot.com/fullchain.pem \
+authbind --deep npm run start
+```
+
+Test automatic cert renewal
+```
+$ sudo certbot renew --dry-run
 ```
